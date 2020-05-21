@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { IntlProvider } from 'react-intl';
 import { RecoilRoot, useRecoilValue } from 'recoil';
 import { ThemeProvider } from 'styled-components';
+import loadable from '@loadable/component';
 import App from './App';
 import messages from './localizations';
 import * as serviceWorker from './serviceWorker';
@@ -11,12 +12,12 @@ import { GlobalStyle } from './styles/globalStyles';
 import { theme } from './styles/theme';
 
 if (!Intl.PluralRules) {
-  React.lazy(() => import('@formatjs/intl-pluralrules/polyfill'));
-  React.lazy(() => import('@formatjs/intl-pluralrules/dist/locale-data/ar'));
+  loadable(() => import('@formatjs/intl-pluralrules/polyfill'));
+  loadable(() => import('@formatjs/intl-pluralrules/dist/locale-data/ar'));
 }
 if (!Intl.RelativeTimeFormat) {
-  React.lazy(() => import('@formatjs/intl-relativetimeformat/polyfill'));
-  React.lazy(() =>
+  loadable(() => import('@formatjs/intl-relativetimeformat/polyfill'));
+  loadable(() =>
     import('@formatjs/intl-relativetimeformat/dist/locale-data/de'),
   );
 }

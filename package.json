@@ -5,6 +5,7 @@
   "dependencies": {
     "@formatjs/intl-pluralrules": "^1.5.9",
     "@formatjs/intl-relativetimeformat": "^4.5.16",
+    "@loadable/component": "^5.12.0",
     "flat": "^5.0.0",
     "prettier": "^2.0.5",
     "prop-types": "^15.7.2",
@@ -60,6 +61,8 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/preset-react": "^7.9.4",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "commitizen": "^4.1.2",
