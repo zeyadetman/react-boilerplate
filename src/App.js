@@ -1,16 +1,15 @@
 import React from 'react';
 import './App.css';
-import { useSetRecoilState } from 'recoil';
+// import { useSetRecoilState } from 'recoil';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import loadable from '@loadable/component';
-import { locale } from './states/globalStates';
+// import { locale } from './states/globalStates';
 
 function App() {
-  const localeChange = useSetRecoilState(locale);
+  // const localeChange = useSetRecoilState(locale);
   const Comp1 = loadable(() => import('./components/comp1'));
   const Comp2 = loadable(() => import('./components/comp2'));
 
-  localeChange('ar-AE'); // to change locale
   return (
     <Router>
       <Switch>
